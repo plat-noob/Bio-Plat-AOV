@@ -14,7 +14,7 @@
             font-family: '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
         body {
-            /* Ảnh nền trong tệp hệ thống của bạn */
+            /* Ảnh nền hệ thống */
             background-image: url('Bg.JPG'); 
             background-repeat: no-repeat;
             background-size: cover;
@@ -24,24 +24,30 @@
             color: #fff;
             display: flex;
             justify-content: center;
-            align-items: flex-start;
             min-height: 100vh;
-            /* Đẩy toàn bộ nội dung thấp xuống bằng 15% chiều cao màn hình để lộ mặt ảnh nền */
-            padding: 15vh 20px 40px 20px; 
+            overflow-x: hidden;
         }
+        
+        /* CONTAINER CHÍNH - ĐỊNH VỊ CỐ ĐỊNH KHOẢNG CÁCH */
         .container {
             width: 100%;
             max-width: 450px;
-            text-align: center;
-            background: transparent; 
-            box-shadow: none;
-            border: none;
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Căn giữa tất cả thành phần con */
+            position: relative;
+            min-height: 100vh;
+            padding: 0 20px;
         }
 
-        /* CHỮ PLAT•CHEAT•AOV TO NỔI BẬT */
+        /* KHU VỰC ĐỈNH ĐẦU (CHỮ + ICON MẠNG XÃ HỘI) */
+        .header-section {
+            position: absolute;
+            top: 40px; /* Cách mép trên cùng */
+            left: 0;
+            width: 100%;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        /* CHỮ PLAT•CHEAT•AOV CẦU VỒNG */
         .special-title {
             font-size: 2.3rem; 
             font-weight: 900;
@@ -49,13 +55,12 @@
             letter-spacing: 1.5px;
             margin-bottom: 12px; 
             transform: skew(-6deg); 
+            display: inline-block;
             
-            /* Dải màu cầu vồng chuyển sắc từ phải sang trái */
             background: linear-gradient(to left, #ff3838, #ff9f43, #feca57, #1dd1a1, #54a0ff, #5f27cd);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             
-            /* Viền chữ đen dày bao quanh */
             filter: drop-shadow(-1.5px -1.5px 0 #000)
                     drop-shadow(1.5px -1.5px 0 #000)
                     drop-shadow(-1.5px 1.5px 0 #000)
@@ -63,12 +68,11 @@
                     drop-shadow(0px 4px 8px rgba(0,0,0,0.8));
         }
         
-        /* 3 ICON MẠNG XÃ HỘI */
+        /* 3 ICON MẠNG XÃ HỘI TRONG SUỐT */
         .social-icons {
             display: flex;
             justify-content: center;
             gap: 28px; 
-            margin-bottom: 30px; 
         }
         .social-icons a {
             color: rgba(255, 255, 255, 0.7); 
@@ -82,25 +86,29 @@
             color: rgba(255, 255, 255, 1); 
         }
 
-        /* DANH SÁCH MỤC NÚT BẤM BÉ LẠI, HÌNH CHỮ NHẬT BO TRÒN 4 GÓC */
+        /* KHU VỰC NÚT BẤM - ĐẨY XUỐNG DƯỚI BỤNG / EO */
         .links-list {
+            position: absolute;
+            bottom: 180px; /* Định vị cố định ở phía dưới, không che thân trên */
+            left: 50%;
+            transform: translateX(-50%);
             display: flex;
             flex-direction: column;
-            gap: 16px; 
+            gap: 14px; 
             width: 100%;
-            max-width: 320px; /* Thu hẹp chiều rộng nút bấm bé lại gọn gàng hơn */
-            margin-bottom: 25px; 
+            max-width: 310px; /* Thu nhỏ phom nút chữ nhật vừa vặn */
+            text-align: center;
         }
         .link-item {
             display: block;
             text-decoration: none;
             font-weight: 800;
-            font-size: 1.1rem; /* Giảm nhẹ cỡ chữ cho cân đối với nút nhỏ */
-            padding: 12px 16px; /* Thu gọn khoảng đệm bên trong nút */
-            border-radius: 10px; /* Bo tròn 4 góc nhẹ nhàng kiểu hình chữ nhật tinh tế */
+            font-size: 1.1rem; 
+            padding: 12px 16px; 
+            border-radius: 10px; /* Hình chữ nhật 4 góc bo tròn nhẹ */
             transition: all 0.25s ease;
             
-            /* TRONG SUỐT HOÀN TOÀN */
+            /* KHUNG TRONG SUỐT XUYÊN THẤU HOÀN TOÀN */
             background: transparent; 
             border: 2px solid rgba(255, 255, 255, 0.85); 
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
@@ -112,7 +120,7 @@
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
         }
 
-        /* Chữ ĐỎ 3D Viền Đen */
+        /* Chữ ĐỎ 3D */
         .text-red {
             color: #ff3838;
             text-shadow: 
@@ -122,7 +130,7 @@
                  1.5px  1.5px 0 #000,
                  0 3px 5px rgba(0,0,0,0.9);
         }
-        /* Chữ XANH DƯƠNG 3D Viền Đen */
+        /* Chữ XANH DƯƠNG 3D */
         .text-blue {
             color: #3897ff;
             text-shadow: 
@@ -133,16 +141,17 @@
                  0 3px 5px rgba(0,0,0,0.9);
         }
 
-        /* AVATAR HÌNH VUÔNG DƯỚI CÙNG */
+        /* AVATAR VUÔNG - ĐẨY XUỐNG DƯỚI CÙNG SÁT ĐÁY TRÌNH DUYỆT */
         .avatar-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
+            position: absolute;
+            bottom: 40px; /* Ghim chặt ở sát đáy, cách thanh địa chỉ một khoảng đẹp */
+            left: 50%;
+            transform: translateX(-50%);
         }
         .avatar-square {
-            width: 100px;
-            height: 100px;
-            border-radius: 14px; /* Bo góc nhẹ đồng bộ với nút bấm */
+            width: 95px;
+            height: 95px;
+            border-radius: 14px; 
             display: flex;
             justify-content: center;
             align-items: center;
@@ -161,23 +170,23 @@
 <body>
 
 <div class="container">
-    <!-- 1. Chữ PLAT•CHEAT•AOV trên cùng -->
-    <div class="special-title">Plat•Cheat•AOV</div>
-
-    <!-- 2. 3 Icon mạng xã hội ngay dưới chữ -->
-    <div class="social-icons">
-        <a href="https://facebook.com/your-profile" target="_blank" class="fb" title="Facebook"><i class="fab fa-facebook"></i></a>
-        <a href="https://t.me/your-username" target="_blank" class="tele" title="Telegram"><i class="fab fa-telegram"></i></a>
-        <a href="https://tiktok.com/@your-username" target="_blank" class="tiktok" title="TikTok"><i class="fab fa-tiktok"></i></a>
+    <!-- Phần 1: Gom nhóm chữ và icon cố định ở đỉnh màn hình -->
+    <div class="header-section">
+        <div class="special-title">Plat•Cheat•AOV</div>
+        <div class="social-icons">
+            <a href="https://facebook.com/your-profile" target="_blank" class="fb" title="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://t.me/your-username" target="_blank" class="tele" title="Telegram"><i class="fab fa-telegram"></i></a>
+            <a href="https://tiktok.com/@your-username" target="_blank" class="tiktok" title="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
     </div>
 
-    <!-- 3. Hai mục dạng chữ nhật nhỏ hơn, khung viền trắng trong suốt -->
+    <!-- Phần 2: Cố định vị trí nút bấm ở tầm thấp bên dưới (nhìn xuyên qua thân người) -->
     <div class="links-list">
         <a href="https://link-lien-he-admin.com" target="_blank" class="link-item text-red">📱 Liên Hệ Admin 📱</a>
         <a href="https://link-tai-game.com" target="_blank" class="link-item text-blue">🎮 Tải Game Tại Đây 🎮</a>
     </div>
 
-    <!-- 4. Ảnh đại diện hình vuông bo góc nằm dưới cùng -->
+    <!-- Phần 3: Cố định Avatar vuông sát hẳn đáy màn hình -->
     <div class="avatar-container">
         <div class="avatar-square">
             <img src="avatar.WEBP" alt="Avatar" class="avatar-image">
