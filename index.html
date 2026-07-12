@@ -61,17 +61,17 @@
         .social-icons a.tele:hover { color: #0088cc; }
         .social-icons a.tiktok:hover { color: #010101; }
 
-        /* Tiêu đề Plat•Cheat•AOV mới */
+        /* Tiêu đề Plat•Cheat•AOV */
         .special-title {
             font-size: 1.3rem;
             font-weight: 700;
             letter-spacing: 0.5px;
-            color: #ffdf00; /* Màu vàng nổi bật giống ảnh của bạn */
+            color: #ffdf00;
             margin-bottom: 25px;
             text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
-        /* 6 Danh Sách Link */
+        /* Danh Sách Link */
         .links-list {
             display: flex;
             flex-direction: column;
@@ -95,32 +95,47 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 12px rgba(0,0,0,0.25);
         }
+        /* Style riêng cho nút Admin nổi bật hơn nếu muốn (Tùy chọn) */
+        .admin-btn {
+            background: #ffdf00;
+            color: #111;
+        }
+        .admin-btn:hover {
+            background: #ffaa00;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <!-- Ảnh đại diện (Sử dụng link ảnh mặc định chất lượng cao để tránh lỗi dấu chấm hỏi) -->
+    <!-- Ảnh đại diện -->
     <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80" alt="Avatar" class="profile-img">
     
-    <!-- 3 Icon Mạng Xã Hội Gốc xếp hàng ngang -->
+    <!-- 3 Icon Mạng Xã Hội -->
     <div class="social-icons">
         <a href="https://facebook.com/your-profile" target="_blank" class="fb" title="Facebook"><i class="fab fa-facebook"></i></a>
         <a href="https://t.me/your-username" target="_blank" class="tele" title="Telegram"><i class="fab fa-telegram"></i></a>
         <a href="https://tiktok.com/@your-username" target="_blank" class="tiktok" title="TikTok"><i class="fab fa-tiktok"></i></a>
     </div>
 
-    <!-- Dòng chữ Plat•Cheat•AOV nằm dưới 3 icon -->
+    <!-- Dòng chữ Plat•Cheat•AOV -->
     <div class="special-title">Plat•Cheat•AOV</div>
 
-    <!-- 6 Danh sách Link liên kết -->
+    <!-- Danh sách Link liên kết -->
     <div class="links-list">
-        <a href="https://google.com" target="_blank" class="link-item">🌐 Trang web cá nhân / Blog</a>
-        <a href="https://youtube.com" target="_blank" class="link-item">📺 Kênh YouTube của mình</a>
-        <a href="https://shopee.vn" target="_blank" class="link-item">🛒 Cửa hàng Shopee</a>
-        <a href="https://github.com" target="_blank" class="link-item">💻 Dự án GitHub</a>
-        <a href="https://linkedin.com" target="_blank" class="link-item">💼 Hồ sơ LinkedIn</a>
-        <a href="https://instagram.com" target="_blank" class="link-item">📸 Hình ảnh trên Instagram</a>
+        <!-- Mục bổ sung: Liên hệ ADMIN nằm trên cùng -->
+        <a href="https://link-lien-he-admin.com" target="_blank" class="link-item admin-btn">📱Liên Hệ ADMIN📱</a>
+
+        <!-- 6 Mục hack game và get key -->
+        <a href="https://link-web-cua-ban.com" target="_blank" class="link-item">🎮 AOV HACK NB 🎮</a>
+        <a href="https://link-web-cua-ban.com" target="_blank" class="link-item">❌ Get Key AOV NB ❌</a>
+        
+        <a href="https://link-web-cua-ban.com" target="_blank" class="link-item">🎮 AOV HACK TIMO 🎮</a>
+        <a href="https://link-web-cua-ban.com" target="_blank" class="link-item">❌ Get Key AOV TIMO ❌</a>
+        
+        <a href="https://link-web-cua-ban.com" target="_blank" class="link-item">🎮 AOV HACK AT 🎮</a>
+        <a href="https://link-web-cua-ban.com" target="_blank" class="link-item">❌ Get Key AOV AT ❌</a>
     </div>
 </div>
 
