@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plat•Cheat•AOV Links</title>
-    <!-- FontAwesome cho icon mạng xã hội -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -103,76 +102,26 @@
         .social-icons a.tele:hover { color: #0088cc; }
         .social-icons a.tiktok:hover { color: #010101; }
 
-        /* DANH SÁCH CHỮ NỔI KHÔNG CÓ Ô NỀN TRẮNG */
+        /* DANH SÁCH MỤC NÚT BẤM KÍNH TRONG SUỐT (LIQUID GLASS) */
         .links-list {
             display: flex;
             flex-direction: column;
-            gap: 25px; /* Tăng khoảng cách giữa 2 dòng chữ */
-            padding: 0 10px;
+            gap: 20px; /* Khoảng cách giữa các nút */
+            padding: 0 5px;
         }
         .link-item {
             display: block;
             text-decoration: none;
             font-weight: 800;
-            font-size: 1.4rem; /* Tăng kích thước chữ to rõ ràng */
-            transition: all 0.2s ease;
-            background: transparent; /* Xoá nền trắng */
-            border: none;
-            box-shadow: none;
-        }
-        .link-item:hover {
-            transform: scale(1.08); /* Phóng to nhẹ khi chạm vào */
-            filter: brightness(1.2);
-        }
-
-        /* Chữ ĐỎ 3D Nổi bật cho Admin */
-        .text-red {
-            color: #ff3838;
-            text-shadow: 
-                -1px -1px 0 #000,  
-                 1px -1px 0 #000,
-                -1px  1px 0 #000,
-                 1px  1px 0 #000,
-                 0 2px 4px rgba(0,0,0,0.8);
-        }
-        /* Chữ XANH DƯƠNG 3D Nổi bật cho Tải Game */
-        .text-blue {
-            color: #3897ff;
-            text-shadow: 
-                -1px -1px 0 #000,  
-                 1px -1px 0 #000,
-                -1px  1px 0 #000,
-                 1px  1px 0 #000,
-                 0 2px 4px rgba(0,0,0,0.8);
-        }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <!-- Chữ PLAT•CHEAT•AOV trên cùng hết -->
-    <div class="special-title">Plat•Cheat•AOV</div>
-
-    <!-- Khu vực ảnh đại diện -->
-    <div class="avatar-container">
-        <div class="avatar-circle">
-            <img src="avatar.WEBP" alt="Avatar" class="avatar-image">
-        </div>
-    </div>
-    
-    <!-- 3 Icon Mạng Xã Hội -->
-    <div class="social-icons">
-        <a href="https://facebook.com/your-profile" target="_blank" class="fb" title="Facebook"><i class="fab fa-facebook"></i></a>
-        <a href="https://t.me/your-username" target="_blank" class="tele" title="Telegram"><i class="fab fa-telegram"></i></a>
-        <a href="https://tiktok.com/@your-username" target="_blank" class="tiktok" title="TikTok"><i class="fab fa-tiktok"></i></a>
-    </div>
-
-    <!-- Chỉ giữ lại 2 mục này, hiển thị dạng chữ nổi trực tiếp trên hình nền -->
-    <div class="links-list">
-        <a href="https://link-lien-he-admin.com" target="_blank" class="link-item text-red">📱 Liên Hệ Admin 📱</a>
-        <a href="https://link-tai-game.com" target="_blank" class="link-item text-blue">🎮 Tải Game Tại Đây 🎮</a>
-    </div>
-</div>
-
-</body>
-</html>
+            font-size: 1.25rem; 
+            padding: 16px;
+            border-radius: 16px;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            
+            /* HIỆU ỨNG LIQUID GLASS */
+            background: rgba(255, 255, 255, 0.12); /* Nền kính trong suốt */
+            border: 1px solid rgba(255, 255, 255, 0.25); /* Viền kính phản chiếu */
+            box-shadow: 
+                0 4px 15px rgba(0, 0, 0, 0.2), 
+                inset 0 0 10px rgba(255, 255, 255, 0.1); /* Bóng đổ bên trong mượt mà */
+            backdrop-filter: blur(10px); /* Làm mờ kính
