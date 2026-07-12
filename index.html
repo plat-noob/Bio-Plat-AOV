@@ -26,7 +26,8 @@
             justify-content: center;
             align-items: flex-start;
             min-height: 100vh;
-            padding: 40px 20px;
+            /* Đẩy toàn bộ nội dung thấp xuống bằng 15% chiều cao màn hình để lộ mặt ảnh nền */
+            padding: 15vh 20px 40px 20px; 
         }
         .container {
             width: 100%;
@@ -35,6 +36,9 @@
             background: transparent; 
             box-shadow: none;
             border: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Căn giữa tất cả thành phần con */
         }
 
         /* CHỮ PLAT•CHEAT•AOV TO NỔI BẬT */
@@ -43,7 +47,7 @@
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            margin-bottom: 15px; /* Giảm nhẹ để sát icon bên dưới hơn */
+            margin-bottom: 12px; 
             transform: skew(-6deg); 
             
             /* Dải màu cầu vồng chuyển sắc từ phải sang trái */
@@ -59,56 +63,56 @@
                     drop-shadow(0px 4px 8px rgba(0,0,0,0.8));
         }
         
-        /* 3 ICON MẠNG XÃ HỘI - DẠNG TRONG SUỐT VÀ TO HƠN */
+        /* 3 ICON MẠNG XÃ HỘI */
         .social-icons {
             display: flex;
             justify-content: center;
-            gap: 28px; /* Tăng khoảng cách giữa các icon */
-            margin-bottom: 35px; /* Khoảng cách xuống khung text bên dưới */
+            gap: 28px; 
+            margin-bottom: 30px; 
         }
         .social-icons a {
-            color: rgba(255, 255, 255, 0.7); /* Màu trắng trong suốt mờ */
-            font-size: 2.4rem; /* Tăng kích thước to hơn xíu */
+            color: rgba(255, 255, 255, 0.7); 
+            font-size: 2.4rem; 
             transition: all 0.25s ease;
             text-decoration: none;
-            /* Hiệu ứng đổ bóng mờ nhẹ của kính xuyên thấu */
             filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.6)); 
         }
         .social-icons a:hover { 
             transform: scale(1.15); 
-            color: rgba(255, 255, 255, 1); /* Sáng rõ lên khi di chuột/chạm vào */
+            color: rgba(255, 255, 255, 1); 
         }
 
-        /* DANH SÁCH MỤC NÚT BẤM KHUNG TRONG SUỐT XUYÊN THẤU */
+        /* DANH SÁCH MỤC NÚT BẤM BÉ LẠI, HÌNH CHỮ NHẬT BO TRÒN 4 GÓC */
         .links-list {
             display: flex;
             flex-direction: column;
-            gap: 20px; 
-            padding: 0 5px;
-            margin-bottom: 30px; /* Tạo khoảng cách trống đến avatar dưới cùng */
+            gap: 16px; 
+            width: 100%;
+            max-width: 320px; /* Thu hẹp chiều rộng nút bấm bé lại gọn gàng hơn */
+            margin-bottom: 25px; 
         }
         .link-item {
             display: block;
             text-decoration: none;
             font-weight: 800;
-            font-size: 1.3rem; 
-            padding: 16px;
-            border-radius: 20px; 
+            font-size: 1.1rem; /* Giảm nhẹ cỡ chữ cho cân đối với nút nhỏ */
+            padding: 12px 16px; /* Thu gọn khoảng đệm bên trong nút */
+            border-radius: 10px; /* Bo tròn 4 góc nhẹ nhàng kiểu hình chữ nhật tinh tế */
             transition: all 0.25s ease;
             
             /* TRONG SUỐT HOÀN TOÀN */
             background: transparent; 
-            border: 2px solid rgba(255, 255, 255, 0.8); 
+            border: 2px solid rgba(255, 255, 255, 0.85); 
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
         }
         .link-item:hover {
-            transform: translateY(-3px); 
+            transform: translateY(-2px); 
             background: rgba(255, 255, 255, 0.15); 
             border-color: #fff;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
         }
 
-        /* Chữ ĐỎ 3D Viền Đen cực nổi trên ảnh nền */
+        /* Chữ ĐỎ 3D Viền Đen */
         .text-red {
             color: #ff3838;
             text-shadow: 
@@ -118,7 +122,7 @@
                  1.5px  1.5px 0 #000,
                  0 3px 5px rgba(0,0,0,0.9);
         }
-        /* Chữ XANH DƯƠNG 3D Viền Đen cực nổi trên ảnh nền */
+        /* Chữ XANH DƯƠNG 3D Viền Đen */
         .text-blue {
             color: #3897ff;
             text-shadow: 
@@ -129,7 +133,7 @@
                  0 3px 5px rgba(0,0,0,0.9);
         }
 
-        /* CHUYỂN AVATAR THÀNH HÌNH VUÔNG XUỐNG DƯỚI CÙNG */
+        /* AVATAR HÌNH VUÔNG DƯỚI CÙNG */
         .avatar-container {
             display: flex;
             justify-content: center;
@@ -138,7 +142,7 @@
         .avatar-square {
             width: 100px;
             height: 100px;
-            border-radius: 16px; /* Bo góc nhẹ tạo hình vuông tinh tế thay vì vòng tròn */
+            border-radius: 14px; /* Bo góc nhẹ đồng bộ với nút bấm */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -157,23 +161,23 @@
 <body>
 
 <div class="container">
-    <!-- 1. Chữ PLAT•CHEAT•AOV trên cùng hết -->
+    <!-- 1. Chữ PLAT•CHEAT•AOV trên cùng -->
     <div class="special-title">Plat•Cheat•AOV</div>
 
-    <!-- 2. 3 Icon mạng xã hội được đẩy lên sát chữ lớn, dạng trong suốt -->
+    <!-- 2. 3 Icon mạng xã hội ngay dưới chữ -->
     <div class="social-icons">
         <a href="https://facebook.com/your-profile" target="_blank" class="fb" title="Facebook"><i class="fab fa-facebook"></i></a>
         <a href="https://t.me/your-username" target="_blank" class="tele" title="Telegram"><i class="fab fa-telegram"></i></a>
         <a href="https://tiktok.com/@your-username" target="_blank" class="tiktok" title="TikTok"><i class="fab fa-tiktok"></i></a>
     </div>
 
-    <!-- 3. Hai mục khung viền trắng trong suốt xuyên thấu -->
+    <!-- 3. Hai mục dạng chữ nhật nhỏ hơn, khung viền trắng trong suốt -->
     <div class="links-list">
         <a href="https://link-lien-he-admin.com" target="_blank" class="link-item text-red">📱 Liên Hệ Admin 📱</a>
         <a href="https://link-tai-game.com" target="_blank" class="link-item text-blue">🎮 Tải Game Tại Đây 🎮</a>
     </div>
 
-    <!-- 4. Khu vực ảnh đại diện HÌNH VUÔNG dời xuống dưới cùng -->
+    <!-- 4. Ảnh đại diện hình vuông bo góc nằm dưới cùng -->
     <div class="avatar-container">
         <div class="avatar-square">
             <img src="avatar.WEBP" alt="Avatar" class="avatar-image">
