@@ -124,4 +124,60 @@
             box-shadow: 
                 0 4px 15px rgba(0, 0, 0, 0.2), 
                 inset 0 0 10px rgba(255, 255, 255, 0.1); /* Bóng đổ bên trong mượt mà */
-            backdrop-filter: blur(10px); /* Làm mờ kính
+            backdrop-filter: blur(10px); /* Làm mờ kính liquid */
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .link-item:hover {
+            transform: translateY(-3px); /* Nhấc nhẹ nút lên khi chạm vào */
+            background: rgba(255, 255, 255, 0.22); /* Sáng kính hơn khi hover */
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+        }
+
+        /* Chữ ĐỎ 3D Nổi bật trên kính cho Admin */
+        .text-red {
+            color: #ff4d4d;
+            text-shadow: 
+                -1px -1px 0 #000,  
+                 1px -1px 0 #000,
+                -1px  1px 0 #000,
+                 1px  1px 0 #000,
+                 0 2px 4px rgba(0,0,0,0.6);
+        }
+        /* Chữ XANH DƯƠNG 3D Nổi bật trên kính cho Tải Game */
+        .text-blue {
+            color: #4da3ff;
+            text-shadow: 
+                -1px -1px 0 #000,  
+                 1px -1px 0 #000,
+                -1px  1px 0 #000,
+                 1px  1px 0 #000,
+                 0 2px 4px rgba(0,0,0,0.6);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="special-title">Plat•Cheat•AOV</div>
+
+    <div class="avatar-container">
+        <div class="avatar-circle">
+            <img src="avatar.WEBP" alt="Avatar" class="avatar-image">
+        </div>
+    </div>
+    
+    <div class="social-icons">
+        <a href="https://facebook.com/your-profile" target="_blank" class="fb" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://t.me/your-username" target="_blank" class="tele" title="Telegram"><i class="fab fa-telegram"></i></a>
+        <a href="https://tiktok.com/@your-username" target="_blank" class="tiktok" title="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+
+    <div class="links-list">
+        <a href="https://link-lien-he-admin.com" target="_blank" class="link-item text-red">📱 Liên Hệ Admin 📱</a>
+        <a href="https://link-tai-game.com" target="_blank" class="link-item text-blue">🎮 Tải Game Tại Đây 🎮</a>
+    </div>
+</div>
+
+</body>
+</html>
