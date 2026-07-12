@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plat•Cheat•AOV Links</title>
+    <!-- FontAwesome cho icon mạng xã hội -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -36,21 +37,21 @@
             border: none;
         }
 
-        /* CHỮ PLAT•CHEAT•AOV TO HƠN + MÀU CẦU VỒNG TỪ PHẢI SANG TRÁI */
+        /* CHỮ PLAT•CHEAT•AOV TO NỔI BẬT */
         .special-title {
-            font-size: 2.3rem; /* Tăng kích thước to hơn đáng kể */
+            font-size: 2.3rem; 
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            margin-bottom: 25px;
+            margin-bottom: 15px; /* Giảm nhẹ để sát icon bên dưới hơn */
             transform: skew(-6deg); 
             
-            /* Tạo dải màu cầu vồng chuyển sắc từ phải sang trái */
+            /* Dải màu cầu vồng chuyển sắc từ phải sang trái */
             background: linear-gradient(to left, #ff3838, #ff9f43, #feca57, #1dd1a1, #54a0ff, #5f27cd);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             
-            /* Hiệu ứng viền đen dày bao quanh để chữ cầu vồng nổi bần bật trên ảnh nền */
+            /* Viền chữ đen dày bao quanh */
             filter: drop-shadow(-1.5px -1.5px 0 #000)
                     drop-shadow(1.5px -1.5px 0 #000)
                     drop-shadow(-1.5px 1.5px 0 #000)
@@ -58,56 +59,33 @@
                     drop-shadow(0px 4px 8px rgba(0,0,0,0.8));
         }
         
-        /* Vòng tròn chứa ảnh Avatar */
-        .avatar-container {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-        .avatar-circle {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 3px solid rgba(255, 255, 255, 0.9);
-            overflow: hidden; 
-            background: #203a43;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-        }
-        .avatar-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-        
-        /* 3 Icon Mạng Xã Hội */
+        /* 3 ICON MẠNG XÃ HỘI - DẠNG TRONG SUỐT VÀ TO HƠN */
         .social-icons {
             display: flex;
             justify-content: center;
-            gap: 24px;
-            margin-bottom: 35px;
+            gap: 28px; /* Tăng khoảng cách giữa các icon */
+            margin-bottom: 35px; /* Khoảng cách xuống khung text bên dưới */
         }
         .social-icons a {
-            color: #fff;
-            font-size: 2rem;
-            transition: transform 0.2s, color 0.2s;
+            color: rgba(255, 255, 255, 0.7); /* Màu trắng trong suốt mờ */
+            font-size: 2.4rem; /* Tăng kích thước to hơn xíu */
+            transition: all 0.25s ease;
             text-decoration: none;
-            filter: drop-shadow(0px 3px 5px rgba(0,0,0,0.8)); 
+            /* Hiệu ứng đổ bóng mờ nhẹ của kính xuyên thấu */
+            filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.6)); 
         }
-        .social-icons a:hover { transform: scale(1.15); }
-        .social-icons a.fb:hover { color: #1877f2; }
-        .social-icons a.tele:hover { color: #0088cc; }
-        .social-icons a.tiktok:hover { color: #010101; }
+        .social-icons a:hover { 
+            transform: scale(1.15); 
+            color: rgba(255, 255, 255, 1); /* Sáng rõ lên khi di chuột/chạm vào */
+        }
 
-        /* DANH SÁCH MỤC NÚT BẤM KHUNG TRONG SUỐT XUYÊN THẤU HOÀN TOÀN */
+        /* DANH SÁCH MỤC NÚT BẤM KHUNG TRONG SUỐT XUYÊN THẤU */
         .links-list {
             display: flex;
             flex-direction: column;
             gap: 20px; 
             padding: 0 5px;
+            margin-bottom: 30px; /* Tạo khoảng cách trống đến avatar dưới cùng */
         }
         .link-item {
             display: block;
@@ -150,28 +128,56 @@
                  1.5px  1.5px 0 #000,
                  0 3px 5px rgba(0,0,0,0.9);
         }
+
+        /* CHUYỂN AVATAR THÀNH HÌNH VUÔNG XUỐNG DƯỚI CÙNG */
+        .avatar-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .avatar-square {
+            width: 100px;
+            height: 100px;
+            border-radius: 16px; /* Bo góc nhẹ tạo hình vuông tinh tế thay vì vòng tròn */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid rgba(255, 255, 255, 0.9);
+            overflow: hidden; 
+            background: #203a43;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+        .avatar-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
+    <!-- 1. Chữ PLAT•CHEAT•AOV trên cùng hết -->
     <div class="special-title">Plat•Cheat•AOV</div>
 
-    <div class="avatar-container">
-        <div class="avatar-circle">
-            <img src="avatar.WEBP" alt="Avatar" class="avatar-image">
-        </div>
-    </div>
-    
+    <!-- 2. 3 Icon mạng xã hội được đẩy lên sát chữ lớn, dạng trong suốt -->
     <div class="social-icons">
         <a href="https://facebook.com/your-profile" target="_blank" class="fb" title="Facebook"><i class="fab fa-facebook"></i></a>
         <a href="https://t.me/your-username" target="_blank" class="tele" title="Telegram"><i class="fab fa-telegram"></i></a>
         <a href="https://tiktok.com/@your-username" target="_blank" class="tiktok" title="TikTok"><i class="fab fa-tiktok"></i></a>
     </div>
 
+    <!-- 3. Hai mục khung viền trắng trong suốt xuyên thấu -->
     <div class="links-list">
         <a href="https://link-lien-he-admin.com" target="_blank" class="link-item text-red">📱 Liên Hệ Admin 📱</a>
         <a href="https://link-tai-game.com" target="_blank" class="link-item text-blue">🎮 Tải Game Tại Đây 🎮</a>
+    </div>
+
+    <!-- 4. Khu vực ảnh đại diện HÌNH VUÔNG dời xuống dưới cùng -->
+    <div class="avatar-container">
+        <div class="avatar-square">
+            <img src="avatar.WEBP" alt="Avatar" class="avatar-image">
+        </div>
     </div>
 </div>
 
