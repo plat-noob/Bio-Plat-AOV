@@ -14,8 +14,8 @@
             font-family: '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
         body {
-            /* Đường dẫn ảnh nền đã cài ở bước trước (ví dụ background.jpg) */
-            background-image: url('background.jpg'); 
+            /* Đường dẫn ảnh nền của bạn trong tệp (Hãy đảm bảo file background.jpg nằm cùng thư mục) */
+            background-image: url('Bg.JPG'); 
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -24,20 +24,18 @@
             color: #fff;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start; /* Cho nội dung bắt đầu từ phía trên */
             min-height: 100vh;
-            padding: 20px;
+            padding: 40px 20px;
         }
         .container {
             width: 100%;
             max-width: 450px;
             text-align: center;
-            /* Đã XOÁ làm mờ (backdrop-filter), chỉ giữ nền đen trong suốt nhẹ để nổi bật nút bấm */
-            background: rgba(0, 0, 0, 0.4); 
-            padding: 30px 20px;
-            border-radius: 24px;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            /* ĐÃ XOÁ BỎ HOÀN TOÀN KHUNG MÀU XÁM VÀ VIỀN */
+            background: transparent; 
+            box-shadow: none;
+            border: none;
         }
         
         /* Giao diện vòng tròn chứa ảnh Avatar từ tệp hệ thống */
@@ -47,16 +45,16 @@
             margin-bottom: 20px;
         }
         .avatar-circle {
-            width: 96px;
-            height: 96px;
+            width: 110px; /* Tăng kích thước nhẹ cho avatar nổi bật */
+            height: 110px;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 3px solid rgba(255, 255, 255, 0.8);
+            border: 3px solid rgba(255, 255, 255, 0.9);
             overflow: hidden; 
             background: #203a43;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
         }
         .avatar-image {
             width: 100%;
@@ -74,9 +72,11 @@
         }
         .social-icons a {
             color: #fff;
-            font-size: 1.8rem;
+            font-size: 2rem;
             transition: transform 0.2s, color 0.2s;
             text-decoration: none;
+            /* Đổ bóng nhẹ phía sau icon để dễ nhìn thấy trên ảnh nền */
+            filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.6)); 
         }
         .social-icons a:hover { transform: scale(1.15); }
         .social-icons a.fb:hover { color: #1877f2; }
@@ -85,21 +85,20 @@
 
         /* HIỆU ỨNG CHỮ THỂ THAO 3D CHO PLAT•CHEAT•AOV */
         .special-title {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: #ffdf00; /* Màu vàng gốc */
+            color: #ffdf00; 
             margin-bottom: 25px;
-            /* Tạo khối đổ bóng 3D dày xuống dưới */
             text-shadow: 
                 0 1px 0 #c7a200,
                 0 2px 0 #b39200,
                 0 3px 0 #9e8100,
                 0 4px 0 #8a7000,
-                0 5px 0 rgba(0,0,0,0.4),
-                0 6px 10px rgba(0,0,0,0.6);
-            transform: skew(-5deg); /* Hơi nghiêng nhẹ cho đậm chất gaming */
+                0 5px 0 rgba(0,0,0,0.5),
+                0 6px 12px rgba(0,0,0,0.7);
+            transform: skew(-5deg); 
         }
 
         /* Danh Sách Link */
@@ -118,15 +117,15 @@
             font-weight: 600;
             font-size: 1.05rem;
             transition: all 0.25s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.25);
         }
         .link-item:hover {
             background: #23d5ab;
             color: #fff;
             transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.35);
         }
-        /* Style riêng cho nút Admin màu vàng rực rỡ giống ảnh mẫu */
+        /* Style riêng cho nút Admin màu vàng rực rỡ */
         .admin-btn {
             background: #ffdf00;
             color: #111;
@@ -143,7 +142,6 @@
     <!-- KHU VỰC AVATAR (Lấy file ảnh avatar.png cùng thư mục trên GitHub) -->
     <div class="avatar-container">
         <div class="avatar-circle">
-            <!-- Lưu ý: Nhớ tải file ảnh lên GitHub đặt đúng tên là avatar.png nhé -->
             <img src="avatar.WEBP" alt="Avatar" class="avatar-image">
         </div>
     </div>
@@ -155,7 +153,7 @@
         <a href="https://tiktok.com/@your-username" target="_blank" class="tiktok" title="TikTok"><i class="fab fa-tiktok"></i></a>
     </div>
 
-    <!-- Dòng chữ Plat•Cheat•AOV (Đã hiệu chỉnh 3D Gaming) -->
+    <!-- Dòng chữ Plat•Cheat•AOV (3D Gaming) -->
     <div class="special-title">Plat•Cheat•AOV</div>
 
     <!-- Danh sách Link liên kết -->
