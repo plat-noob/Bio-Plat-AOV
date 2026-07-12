@@ -13,7 +13,15 @@
             font-family: '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
         body {
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            /* THAY ĐỔI TẠI ĐÂY: Thay background.jpg bằng đúng tên và đuôi file ảnh bạn vừa tải lên */
+            background-image: url('Bg.JPG'); 
+            
+            /* Cấu hình giúp ảnh nền full màn hình, không bị lặp lại và luôn ở giữa */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            
             color: #fff;
             display: flex;
             justify-content: center;
@@ -25,12 +33,13 @@
             width: 100%;
             max-width: 450px;
             text-align: center;
-            background: rgba(255, 255, 255, 0.08);
+            /* Tăng độ mờ nền container một chút để chữ dễ đọc hơn trên nền ảnh mới */
+            background: rgba(0, 0, 0, 0.4); 
             padding: 30px 20px;
             border-radius: 24px;
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
@@ -54,7 +63,7 @@
         .avatar-image {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Giúp ảnh không bị móp, tự động vuông vắn trong vòng tròn */
+            object-fit: cover;
             border-radius: 50%;
         }
         
@@ -83,7 +92,7 @@
             letter-spacing: 0.5px;
             color: #ffdf00;
             margin-bottom: 25px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
 
         /* Danh Sách Link */
@@ -126,7 +135,7 @@
 <div class="container">
     <div class="avatar-container">
         <div class="avatar-circle">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSvFI4d8pOMe8mID_YLQAhumkF0MVkDqEC1GEtiJ3XCA&s=10" alt="Avatar" class="avatar-image">
+            <img src="CHÈN_LINK_ẢNH_CỦA_BẠN_VÀO_ĐÂY" alt="Avatar" class="avatar-image">
         </div>
     </div>
     
