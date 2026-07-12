@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plat•Cheat•AOV Links</title>
+    <!-- FontAwesome cho icon mạng xã hội -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -13,10 +14,8 @@
             font-family: '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
         body {
-            /* THAY ĐỔI TẠI ĐÂY: Thay background.jpg bằng đúng tên và đuôi file ảnh bạn vừa tải lên */
-            background-image: url('Bg.JPG'); 
-            
-            /* Cấu hình giúp ảnh nền full màn hình, không bị lặp lại và luôn ở giữa */
+            /* Đường dẫn ảnh nền đã cài ở bước trước (ví dụ background.jpg) */
+            background-image: url('background.jpg'); 
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -33,17 +32,15 @@
             width: 100%;
             max-width: 450px;
             text-align: center;
-            /* Tăng độ mờ nền container một chút để chữ dễ đọc hơn trên nền ảnh mới */
+            /* Đã XOÁ làm mờ (backdrop-filter), chỉ giữ nền đen trong suốt nhẹ để nổi bật nút bấm */
             background: rgba(0, 0, 0, 0.4); 
             padding: 30px 20px;
             border-radius: 24px;
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
-        /* Giao diện vòng tròn chứa ảnh Avatar */
+        /* Giao diện vòng tròn chứa ảnh Avatar từ tệp hệ thống */
         .avatar-container {
             display: flex;
             justify-content: center;
@@ -56,9 +53,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 3px solid rgba(255, 255, 255, 0.6);
+            border: 3px solid rgba(255, 255, 255, 0.8);
             overflow: hidden; 
             background: #203a43;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
         .avatar-image {
             width: 100%;
@@ -85,14 +83,23 @@
         .social-icons a.tele:hover { color: #0088cc; }
         .social-icons a.tiktok:hover { color: #010101; }
 
-        /* Tiêu đề Plat•Cheat•AOV */
+        /* HIỆU ỨNG CHỮ THỂ THAO 3D CHO PLAT•CHEAT•AOV */
         .special-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            color: #ffdf00;
+            font-size: 1.6rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #ffdf00; /* Màu vàng gốc */
             margin-bottom: 25px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            /* Tạo khối đổ bóng 3D dày xuống dưới */
+            text-shadow: 
+                0 1px 0 #c7a200,
+                0 2px 0 #b39200,
+                0 3px 0 #9e8100,
+                0 4px 0 #8a7000,
+                0 5px 0 rgba(0,0,0,0.4),
+                0 6px 10px rgba(0,0,0,0.6);
+            transform: skew(-5deg); /* Hơi nghiêng nhẹ cho đậm chất gaming */
         }
 
         /* Danh Sách Link */
@@ -119,7 +126,7 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 12px rgba(0,0,0,0.25);
         }
-        /* Style riêng cho nút Admin nổi bật */
+        /* Style riêng cho nút Admin màu vàng rực rỡ giống ảnh mẫu */
         .admin-btn {
             background: #ffdf00;
             color: #111;
@@ -133,23 +140,30 @@
 <body>
 
 <div class="container">
+    <!-- KHU VỰC AVATAR (Lấy file ảnh avatar.png cùng thư mục trên GitHub) -->
     <div class="avatar-container">
         <div class="avatar-circle">
-            <img src="CHÈN_LINK_ẢNH_CỦA_BẠN_VÀO_ĐÂY" alt="Avatar" class="avatar-image">
+            <!-- Lưu ý: Nhớ tải file ảnh lên GitHub đặt đúng tên là avatar.png nhé -->
+            <img src="avatar.png" alt="Avatar" class="avatar-image">
         </div>
     </div>
     
+    <!-- 3 Icon Mạng Xã Hội -->
     <div class="social-icons">
         <a href="https://facebook.com/your-profile" target="_blank" class="fb" title="Facebook"><i class="fab fa-facebook"></i></a>
         <a href="https://t.me/your-username" target="_blank" class="tele" title="Telegram"><i class="fab fa-telegram"></i></a>
         <a href="https://tiktok.com/@your-username" target="_blank" class="tiktok" title="TikTok"><i class="fab fa-tiktok"></i></a>
     </div>
 
+    <!-- Dòng chữ Plat•Cheat•AOV (Đã hiệu chỉnh 3D Gaming) -->
     <div class="special-title">Plat•Cheat•AOV</div>
 
+    <!-- Danh sách Link liên kết -->
     <div class="links-list">
+        <!-- Mục bổ sung: Liên hệ ADMIN nằm trên cùng -->
         <a href="https://link-lien-he-admin.com" target="_blank" class="link-item admin-btn">📱Liên Hệ ADMIN📱</a>
 
+        <!-- 6 Mục hack game và get key -->
         <a href="https://link-web-cua-ban.com" target="_blank" class="link-item">🎮 AOV HACK NB 🎮</a>
         <a href="https://link-web-cua-ban.com" target="_blank" class="link-item">❌ Get Key AOV NB ❌</a>
         
