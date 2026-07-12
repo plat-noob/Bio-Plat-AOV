@@ -28,7 +28,7 @@
             overflow-x: hidden;
         }
         
-        /* CONTAINER CHÍNH - ĐỊNH VỊ CỐ ĐỊNH KHOẢNG CÁCH */
+        /* CONTAINER CHÍNH */
         .container {
             width: 100%;
             max-width: 450px;
@@ -40,22 +40,24 @@
         /* KHU VỰC ĐỈNH ĐẦU (CHỮ + ICON MẠNG XÃ HỘI) */
         .header-section {
             position: absolute;
-            top: 40px; /* Cách mép trên cùng */
+            top: 40px; 
             left: 0;
             width: 100%;
             text-align: center;
             padding: 0 20px;
         }
 
-        /* CHỮ PLAT•CHEAT•AOV CẦU VỒNG */
+        /* CHỮ PLAT•CHEAT•AOV CẦU VỒNG - ĐÃ THU NGẮN CHIỀU DÀI */
         .special-title {
             font-size: 2.3rem; 
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             margin-bottom: 12px; 
-            transform: skew(-6deg); 
             display: inline-block;
+            
+            /* skew(-6deg) làm nghiêng chữ, scaleX(0.85) giúp thu ngắn độ dài chữ lại theo ý bạn */
+            transform: skew(-6deg) scaleX(0.85); 
             
             background: linear-gradient(to left, #ff3838, #ff9f43, #feca57, #1dd1a1, #54a0ff, #5f27cd);
             -webkit-background-clip: text;
@@ -86,17 +88,17 @@
             color: rgba(255, 255, 255, 1); 
         }
 
-        /* KHU VỰC NÚT BẤM - ĐẨY XUỐNG DƯỚI BỤNG / EO */
+        /* KHU VỰC NÚT BẤM - ĐÃ ĐẨY LÊN PHẦN NGỰC VÀ BỤNG */
         .links-list {
             position: absolute;
-            bottom: 180px; /* Định vị cố định ở phía dưới, không che thân trên */
+            bottom: 275px; /* Tăng từ 180px lên 275px để đưa nút lên đúng vị trí ngực/bụng */
             left: 50%;
             transform: translateX(-50%);
             display: flex;
             flex-direction: column;
             gap: 14px; 
             width: 100%;
-            max-width: 310px; /* Thu nhỏ phom nút chữ nhật vừa vặn */
+            max-width: 310px; 
             text-align: center;
         }
         .link-item {
@@ -105,7 +107,7 @@
             font-weight: 800;
             font-size: 1.1rem; 
             padding: 12px 16px; 
-            border-radius: 10px; /* Hình chữ nhật 4 góc bo tròn nhẹ */
+            border-radius: 10px; 
             transition: all 0.25s ease;
             
             /* KHUNG TRONG SUỐT XUYÊN THẤU HOÀN TOÀN */
@@ -141,10 +143,10 @@
                  0 3px 5px rgba(0,0,0,0.9);
         }
 
-        /* AVATAR VUÔNG - ĐẨY XUỐNG DƯỚI CÙNG SÁT ĐÁY TRÌNH DUYỆT */
+        /* AVATAR VUÔNG - GHIM SÁT ĐÁY MÀN HÌNH */
         .avatar-container {
             position: absolute;
-            bottom: 40px; /* Ghim chặt ở sát đáy, cách thanh địa chỉ một khoảng đẹp */
+            bottom: 40px; 
             left: 50%;
             transform: translateX(-50%);
         }
@@ -170,7 +172,7 @@
 <body>
 
 <div class="container">
-    <!-- Phần 1: Gom nhóm chữ và icon cố định ở đỉnh màn hình -->
+    <!-- Phần 1: Gom nhóm chữ (đã làm ngắn) và icon ở đỉnh màn hình -->
     <div class="header-section">
         <div class="special-title">Plat•Cheat•AOV</div>
         <div class="social-icons">
@@ -180,13 +182,13 @@
         </div>
     </div>
 
-    <!-- Phần 2: Cố định vị trí nút bấm ở tầm thấp bên dưới (nhìn xuyên qua thân người) -->
+    <!-- Phần 2: Hai nút bấm ở tầm cao (phần ngực/bụng) -->
     <div class="links-list">
         <a href="https://link-lien-he-admin.com" target="_blank" class="link-item text-red">📱 Liên Hệ Admin 📱</a>
         <a href="https://link-tai-game.com" target="_blank" class="link-item text-blue">🎮 Tải Game Tại Đây 🎮</a>
     </div>
 
-    <!-- Phần 3: Cố định Avatar vuông sát hẳn đáy màn hình -->
+    <!-- Phần 3: Avatar vuông ghim chặt sát đáy màn hình -->
     <div class="avatar-container">
         <div class="avatar-square">
             <img src="avatar.WEBP" alt="Avatar" class="avatar-image">
