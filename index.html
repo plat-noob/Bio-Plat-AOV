@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Plat•Cheat•AOV Links</title>
     <!-- FontAwesome cho icon mạng xã hội -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -13,19 +13,23 @@
             box-sizing: border-box;
             font-family: '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
+        html, body {
+            height: 100vh;
+            width: 100vw;
+            /* Khóa cuộn trang hoàn toàn để không bao giờ bị kéo lòi khoảng trắng */
+            overflow: hidden; 
+        }
         body {
-            /* Ảnh nền hệ thống */
+            /* Ảnh nền hệ thống của bạn */
             background-image: url('Bg.JPG'); 
             background-repeat: no-repeat;
-            background-size: cover;
+            /* Ép ảnh kéo dãn phủ kín chuẩn 100% toàn màn hình điện thoại */
+            background-size: 100% 100%; 
             background-position: center;
-            background-attachment: fixed;
             
             color: #fff;
             display: flex;
             justify-content: center;
-            min-height: 100vh;
-            overflow-x: hidden;
         }
         
         /* CONTAINER CHÍNH */
@@ -33,7 +37,7 @@
             width: 100%;
             max-width: 450px;
             position: relative;
-            min-height: 100vh;
+            height: 100vh;
             padding: 0 20px;
         }
 
@@ -47,7 +51,7 @@
             padding: 0 20px;
         }
 
-        /* CHỮ PLAT•CHEAT•AOV CẦU VỒNG - ĐÃ THU NGẮN CHIỀU DÀI */
+        /* CHỮ PLAT•CHEAT•AOV CẦU VỒNG THU NGẮN */
         .special-title {
             font-size: 2.3rem; 
             font-weight: 900;
@@ -55,8 +59,6 @@
             letter-spacing: 1.5px;
             margin-bottom: 12px; 
             display: inline-block;
-            
-            /* skew(-6deg) làm nghiêng chữ, scaleX(0.85) giúp thu ngắn độ dài chữ lại theo ý bạn */
             transform: skew(-6deg) scaleX(0.85); 
             
             background: linear-gradient(to left, #ff3838, #ff9f43, #feca57, #1dd1a1, #54a0ff, #5f27cd);
@@ -88,10 +90,10 @@
             color: rgba(255, 255, 255, 1); 
         }
 
-        /* KHU VỰC NÚT BẤM - ĐÃ ĐẨY LÊN PHẦN NGỰC VÀ BỤNG */
+        /* KHU VỰC NÚT BẤM KHUNG TRONG SUỐT - VỊ TRÍ NGỰC/BỤNG */
         .links-list {
             position: absolute;
-            bottom: 275px; /* Tăng từ 180px lên 275px để đưa nút lên đúng vị trí ngực/bụng */
+            bottom: 265px; 
             left: 50%;
             transform: translateX(-50%);
             display: flex;
@@ -110,7 +112,6 @@
             border-radius: 10px; 
             transition: all 0.25s ease;
             
-            /* KHUNG TRONG SUỐT XUYÊN THẤU HOÀN TOÀN */
             background: transparent; 
             border: 2px solid rgba(255, 255, 255, 0.85); 
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
@@ -143,10 +144,10 @@
                  0 3px 5px rgba(0,0,0,0.9);
         }
 
-        /* AVATAR VUÔNG - GHIM SÁT ĐÁY MÀN HÌNH */
+        /* AVATAR VUÔNG - ĐƯỢC CĂN CHỈNH NẰM TRỌN TRÊN NỀN ẢNH ĐẸP MẮT */
         .avatar-container {
             position: absolute;
-            bottom: 40px; 
+            bottom: 45px; /* Giữ avatar cách đáy một khoảng an toàn trên nền ảnh */
             left: 50%;
             transform: translateX(-50%);
         }
@@ -172,7 +173,7 @@
 <body>
 
 <div class="container">
-    <!-- Phần 1: Gom nhóm chữ (đã làm ngắn) và icon ở đỉnh màn hình -->
+    <!-- Phần 1: Chữ cầu vồng ngắn gọn + icon mạng xã hội đỉnh đầu -->
     <div class="header-section">
         <div class="special-title">Plat•Cheat•AOV</div>
         <div class="social-icons">
@@ -182,13 +183,13 @@
         </div>
     </div>
 
-    <!-- Phần 2: Hai nút bấm ở tầm cao (phần ngực/bụng) -->
+    <!-- Phần 2: Hai nút bấm xuyên thấu vị trí ngực/bụng -->
     <div class="links-list">
         <a href="https://link-lien-he-admin.com" target="_blank" class="link-item text-red">📱 Liên Hệ Admin 📱</a>
         <a href="https://link-tai-game.com" target="_blank" class="link-item text-blue">🎮 Tải Game Tại Đây 🎮</a>
     </div>
 
-    <!-- Phần 3: Avatar vuông ghim chặt sát đáy màn hình -->
+    <!-- Phần 3: Avatar vuông nằm trọn vẹn trong khung ảnh nền ở phía dưới -->
     <div class="avatar-container">
         <div class="avatar-square">
             <img src="avatar.WEBP" alt="Avatar" class="avatar-image">
