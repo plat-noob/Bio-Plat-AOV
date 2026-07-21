@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Plat•Cheat Links</title>
-    <!-- FontAwesome cho icon mạng xã hội -->
+    <!-- FontAwesome cho icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -20,10 +20,10 @@
             overflow: hidden; 
         }
         body {
-            /* Ảnh nền hệ thống của bạn */
+            /* Ảnh nền hệ thống */
             background-image: url('Bg.JPG'); 
             background-repeat: no-repeat;
-            /* Ép ảnh kéo dãn phủ kín chuẩn 100% toàn màn hình điện thoại */
+            /* Ép ảnh kéo dãn phủ kín toàn màn hình */
             background-size: 100% 100%; 
             background-position: center;
             
@@ -41,23 +41,23 @@
             padding: 0 20px;
         }
 
-        /* KHU VỰC ĐỈNH ĐẦU (CHỮ + ICON MẠNG XÃ HỘI + MÔ TẢ) */
+        /* KHU VỰC ĐỈNH ĐẦU */
         .header-section {
             position: absolute;
-            top: 40px; 
+            top: 45px; 
             left: 0;
             width: 100%;
             text-align: center;
             padding: 0 20px;
         }
 
-        /* CHỮ PLAT•CHEAT CẦU VỒNG */
+        /* CHỮ PLAT•CHEAT CẦU VỒNG 3D */
         .special-title {
             font-size: 2.3rem; 
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            margin-bottom: 16px; 
+            margin-bottom: 12px; 
             display: inline-block;
             transform: skew(-6deg) scaleX(0.85); 
             
@@ -71,37 +71,29 @@
                     drop-shadow(1.5px 1.5px 0 #000)
                     drop-shadow(0px 4px 8px rgba(0,0,0,0.8));
         }
-        
-        /* 3 ICON MẠNG XÃ HỘI */
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 35px;
-            margin-bottom: 12px;
-        }
-        .social-icons a {
-            color: #ffffff;
-            font-size: 2.3rem; 
-            transition: all 0.25s ease;
-            text-decoration: none;
-            filter: drop-shadow(0px 3px 5px rgba(0,0,0,0.7)); 
-        }
-        .social-icons a:hover { 
-            transform: scale(1.15); 
-            color: rgba(255, 255, 255, 0.85); 
-        }
 
-        /* DÒNG MÔ TẢ DƯỚI ICON MẠNG XÃ HỘI */
+        /* DÒNG MÔ TẢ ĐƯỢC THIẾT KẾ ĐẸP HƠN */
         .sub-description {
-            font-size: 1rem;
-            font-weight: 700;
-            color: #ffffff;
-            text-shadow: 
-                -1px -1px 0 #000,  
-                 1px -1px 0 #000,
-                -1px  1px 0 #000,
-                 1px  1px 0 #000,
-                 0 2px 4px rgba(0,0,0,0.8);
+            display: inline-block;
+            font-size: 0.95rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            
+            /* Màu chữ Gradient Vàng - Cam */
+            background: linear-gradient(45deg, #ffe259, #ffa751);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            
+            /* Khung mờ phía sau giúp chữ dễ đọc trên nền ảnh */
+            background-color: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.9));
         }
 
         /* KHU VỰC NÚT BẤM KHUNG TRONG SUỐT */
@@ -162,14 +154,10 @@
 <body>
 
 <div class="container">
-    <!-- Phần 1: Tiêu đề + 3 icon + dòng mô tả -->
+    <!-- Phần 1: Tiêu đề + Dòng mô tả nổi bật -->
     <div class="header-section">
         <div class="special-title">Plat•Cheat</div>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/share/1949QRoB5B/?mibextid=wwXIfr" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://t.me/plat_mod" target="_blank" title="Telegram"><i class="fas fa-paper-plane"></i></a>
-            <a href="https://www.tiktok.com/@duy_lee01?_r=1&_t=ZS-97xq4Ulq5ED" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-        </div>
+        <br>
         <div class="sub-description">Cung Cấp Hack AOV , Free Fire Miễn Phí</div>
     </div>
 
