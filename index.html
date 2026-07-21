@@ -23,9 +23,9 @@
             /* Ảnh nền hệ thống */
             background-image: url('Bg.JPG'); 
             background-repeat: no-repeat;
-            /* Ép ảnh kéo dãn phủ kín toàn màn hình */
-            background-size: 100% 100%; 
-            background-position: center;
+            /* Phủ kín màn hình nhưng GIỮ NGUYÊN TỈ LỆ ẢNH, không bị co giãn méo hình */
+            background-size: cover; 
+            background-position: center center;
             
             color: #fff;
             display: flex;
@@ -118,7 +118,8 @@
             border-radius: 10px; 
             transition: all 0.25s ease;
             
-            background: transparent; 
+            background: rgba(0, 0, 0, 0.2); 
+            backdrop-filter: blur(4px);
             border: 2px solid rgba(255, 255, 255, 0.85); 
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
         }
@@ -170,3 +171,4 @@
 
 </body>
 </html>
+
