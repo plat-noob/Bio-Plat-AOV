@@ -23,7 +23,7 @@
             /* Ảnh nền hệ thống */
             background-image: url('Bg.JPG'); 
             background-repeat: no-repeat;
-            /* Phủ kín màn hình nhưng GIỮ NGUYÊN TỈ LỆ ẢNH, không bị co giãn méo hình */
+            /* Phủ kín màn hình, giữ nguyên tỷ lệ ảnh */
             background-size: cover; 
             background-position: center center;
             
@@ -44,11 +44,15 @@
         /* KHU VỰC ĐỈNH ĐẦU */
         .header-section {
             position: absolute;
-            top: 45px; 
+            top: 40px; 
             left: 0;
             width: 100%;
             text-align: center;
-            padding: 0 20px;
+            padding: 0 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px; /* Khoảng cách giữa tiêu đề và các dòng mô tả */
         }
 
         /* CHỮ PLAT•CHEAT CẦU VỒNG 3D */
@@ -57,7 +61,7 @@
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            margin-bottom: 12px; 
+            margin-bottom: 4px; 
             display: inline-block;
             transform: skew(-6deg) scaleX(0.85); 
             
@@ -72,15 +76,17 @@
                     drop-shadow(0px 4px 8px rgba(0,0,0,0.8));
         }
 
-        /* DÒNG MÔ TẢ MÀU VÀNG-CAM BỔ SUNG KHUNG MỜ DỄ ĐỌC */
+        /* KHUNG CHỮ NỔI NẰM NGUYÊN TRÊN 1 DÒNG */
         .sub-description {
             display: inline-block;
-            font-size: 0.95rem;
+            white-space: nowrap; /* Bắt buộc chữ nằm nguyên trên 1 dòng, không bị ngắt */
+            font-size: 0.8rem; /* Tối ưu kích thước chữ vừa màn hình điện thoại */
             font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            padding: 8px 16px;
+            letter-spacing: 0.3px;
+            padding: 6px 14px;
             border-radius: 20px;
+            max-width: 95%; /* Tránh bị đè lề */
             
             /* Màu chữ Gradient Vàng - Cam */
             background: linear-gradient(45deg, #ffe259, #ffa751);
@@ -88,7 +94,7 @@
             -webkit-text-fill-color: transparent;
             
             /* Khung mờ nền đen giúp chữ luôn rõ nét */
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.55);
             backdrop-filter: blur(4px);
             border: 1px solid rgba(255, 255, 255, 0.2);
             
@@ -155,11 +161,11 @@
 <body>
 
 <div class="container">
-    <!-- Phần 1: Tiêu đề + Dòng mô tả -->
+    <!-- Phần 1: Tiêu đề + 2 Dòng mô tả -->
     <div class="header-section">
         <div class="special-title">Plat•Cheat</div>
-        <br>
         <div class="sub-description">Cung Cấp Hack AOV , Free Fire Miễn Phí</div>
+        <div class="sub-description">Cung Cấp IPA App Mod iOS</div>
     </div>
 
     <!-- Phần 2: Hai nút bấm xuyên thấu -->
@@ -171,4 +177,3 @@
 
 </body>
 </html>
-
