@@ -20,21 +20,16 @@
             overflow: hidden; 
         }
         body {
+            /* Ảnh nền hệ thống */
+            background-image: url('Bg.JPG'); 
+            background-repeat: no-repeat;
+            /* Ép ảnh kéo dãn phủ kín toàn màn hình */
+            background-size: 100% 100%; 
+            background-position: center;
+            
             color: #fff;
             display: flex;
             justify-content: center;
-            background-color: #000; /* Nền tối dự phòng */
-        }
-
-        /* THIẾT LẬP VIDEO NỀN */
-        .bg-video {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ép video phủ kín màn hình mà không bị méo */
-            z-index: -1; /* Đẩy video xuống dưới cùng */
         }
         
         /* CONTAINER CHÍNH */
@@ -44,7 +39,6 @@
             position: relative;
             height: 100vh;
             padding: 0 20px;
-            z-index: 1;
         }
 
         /* KHU VỰC ĐỈNH ĐẦU */
@@ -78,7 +72,7 @@
                     drop-shadow(0px 4px 8px rgba(0,0,0,0.8));
         }
 
-        /* DÒNG MÔ TẢ NỔI BẬT */
+        /* DÒNG MÔ TẢ MÀU VÀNG-CAM BỔ SUNG KHUNG MỜ DỄ ĐỌC */
         .sub-description {
             display: inline-block;
             font-size: 0.95rem;
@@ -93,9 +87,9 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             
-            /* Khung mờ giúp chữ rõ nét trên mọi nền video */
+            /* Khung mờ nền đen giúp chữ luôn rõ nét */
             background-color: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(5px);
+            backdrop-filter: blur(4px);
             border: 1px solid rgba(255, 255, 255, 0.2);
             
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
@@ -124,14 +118,13 @@
             border-radius: 10px; 
             transition: all 0.25s ease;
             
-            background: rgba(0, 0, 0, 0.2); /* Mờ nhẹ để nổi trên video */
-            backdrop-filter: blur(4px);
+            background: transparent; 
             border: 2px solid rgba(255, 255, 255, 0.85); 
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
         }
         .link-item:hover {
             transform: translateY(-2px); 
-            background: rgba(255, 255, 255, 0.25); 
+            background: rgba(255, 255, 255, 0.15); 
             border-color: #fff;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
         }
@@ -159,12 +152,6 @@
     </style>
 </head>
 <body>
-
-<!-- VIDEO NỀN -->
-<video class="bg-video" autoplay muted loop playsinline>
-    <source src="BgVideo.MP4" type="video/mp4">
-    Trình duyệt của bạn không hỗ trợ video nền.
-</video>
 
 <div class="container">
     <!-- Phần 1: Tiêu đề + Dòng mô tả -->
