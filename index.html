@@ -52,7 +52,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 8px; /* Khoảng cách giữa tiêu đề và các dòng mô tả */
+            gap: 8px;
         }
 
         /* CHỮ PLAT•CHEAT CẦU VỒNG 3D */
@@ -79,21 +79,19 @@
         /* KHUNG CHỮ NỔI NẰM NGUYÊN TRÊN 1 DÒNG */
         .sub-description {
             display: inline-block;
-            white-space: nowrap; /* Bắt buộc chữ nằm nguyên trên 1 dòng, không bị ngắt */
-            font-size: 0.8rem; /* Tối ưu kích thước chữ vừa màn hình điện thoại */
+            white-space: nowrap;
+            font-size: 0.8rem;
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 0.3px;
             padding: 6px 14px;
             border-radius: 20px;
-            max-width: 95%; /* Tránh bị đè lề */
+            max-width: 95%;
             
-            /* Màu chữ Gradient Vàng - Cam */
             background: linear-gradient(45deg, #ffe259, #ffa751);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             
-            /* Khung mờ nền đen giúp chữ luôn rõ nét */
             background-color: rgba(0, 0, 0, 0.55);
             backdrop-filter: blur(4px);
             border: 1px solid rgba(255, 255, 255, 0.2);
@@ -105,12 +103,12 @@
         /* KHU VỰC NÚT BẤM KHUNG TRONG SUỐT */
         .links-list {
             position: absolute;
-            bottom: 250px; 
+            bottom: 200px; /* Điều chỉnh khoảng cách để chứa đủ 3 nút */
             left: 50%;
             transform: translateX(-50%);
             display: flex;
             flex-direction: column;
-            gap: 14px; 
+            gap: 12px; 
             width: 100%;
             max-width: 310px; 
             text-align: center;
@@ -146,6 +144,16 @@
                  1.5px  1.5px 0 #000,
                  0 3px 5px rgba(0,0,0,0.9);
         }
+        /* Chữ VÀNG 3D */
+        .text-yellow {
+            color: #feca57;
+            text-shadow: 
+                -1.5px -1.5px 0 #000,  
+                 1.5px -1.5px 0 #000,
+                -1.5px  1.5px 0 #000,
+                 1.5px  1.5px 0 #000,
+                 0 3px 5px rgba(0,0,0,0.9);
+        }
         /* Chữ XANH DƯƠNG 3D */
         .text-blue {
             color: #3897ff;
@@ -168,9 +176,11 @@
         <div class="sub-description">Cung Cấp IPA App Mod iOS</div>
     </div>
 
-    <!-- Phần 2: Hai nút bấm xuyên thấu -->
+    <!-- Phần 2: Ba nút bấm xuyên thấu -->
     <div class="links-list">
         <a href="https://t.me/plat_noob" target="_blank" class="link-item text-red">📱 Liên Hệ Admin 📱</a>
+        <!-- Nút Kênh Share MOD mới thêm vào -->
+        <a href="https://t.me/plat_mod" target="_blank" class="link-item text-yellow">📢 Kênh Share MOD 📢</a>
         <a href="https://plat-noob.github.io/SubUnlock-Plat/" target="_blank" class="link-item text-blue">🎮 Tải Game Tại Đây 🎮</a>
     </div>
 </div>
